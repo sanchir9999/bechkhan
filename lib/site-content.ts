@@ -58,18 +58,40 @@ export const siteContent = {
             email: "oyuna@bechekhan.ru",
             phone: "+7 976 99 03 9686",
             messenger: "+7 (991) 427-19-04",
-            region: "Монгол Улс болон ЕАЭЗ-ийн орнууд",
+            detailedInfoTitle: "📞 Дэлгэрэнгүй мэдээлэл авахыг хүсвэл:",
+            additionalContacts: [
+                {
+                    label: "Утас",
+                    value: "+79914271904",
+                },
+                {
+                    label: "WhatsApp",
+                    value: "+79914271904",
+                },
+                {
+                    label: "Viber",
+                    value: "+79914271904",
+                },
+                {
+                    label: "Telegram",
+                    value: "+79914271904",
+                },
+                {
+                    label: "WeChat, imo, KakaoTalk",
+                    value: "+79140561369",
+                },
+            ],
+            region: "Монгол Улс болон Евразийн эдийн засгийн холбооны орнууд",
             socialTitle: "Сошиал холбоосууд",
             socials: {
                 whatsapp: "https://wa.me/79914271904",
                 viber: "viber://chat?number=%2B79914271904",
                 wechat: "https://www.wechat.com/",
                 telegram: "https://t.me/yourusername",
-                facebook: "https://facebook.com/yourpage",
-                instagram: "https://instagram.com/yourpage",
-                youtube: "https://youtube.com/@yourchannel",
-                tiktok: "https://tiktok.com/@yourpage",
-                linkedin: "https://linkedin.com/company/yourcompany",
+                facebook:
+                    "https://www.facebook.com/bechekhan?mibextid=wwXIfr&rdid=R70JS1LSNetS9Cga&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Atj9bKFue%2F%3Fmibextid%3DwwXIfr#",
+                youtube:
+                    "https://youtube.com/watch?si=atWjwf2GxFSPXOGu&v=jXdLwLpRbtk&feature=youtu.be",
             },
         },
         footer: {
@@ -134,6 +156,29 @@ export const siteContent = {
             email: "oyuna@bechekhan.ru",
             phone: "+7 976 99 03 9686",
             messenger: "+7 (991) 427-19-04",
+            detailedInfoTitle: "📞 For detailed information:",
+            additionalContacts: [
+                {
+                    label: "Phone",
+                    value: "+79914271904",
+                },
+                {
+                    label: "WhatsApp",
+                    value: "+79914271904",
+                },
+                {
+                    label: "Viber",
+                    value: "+79914271904",
+                },
+                {
+                    label: "Telegram",
+                    value: "+79914271904",
+                },
+                {
+                    label: "WeChat, imo, KakaoTalk",
+                    value: "+79140561369",
+                },
+            ],
             region: "Mongolia and EAEU countries",
             socialTitle: "Social links",
             socials: {
@@ -141,11 +186,10 @@ export const siteContent = {
                 viber: "viber://chat?number=%2B79914271904",
                 wechat: "https://www.wechat.com/",
                 telegram: "https://t.me/yourusername",
-                facebook: "https://facebook.com/yourpage",
-                instagram: "https://instagram.com/yourpage",
-                youtube: "https://youtube.com/@yourchannel",
-                tiktok: "https://tiktok.com/@yourpage",
-                linkedin: "https://linkedin.com/company/yourcompany",
+                facebook:
+                    "https://www.facebook.com/bechekhan?mibextid=wwXIfr&rdid=R70JS1LSNetS9Cga&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Atj9bKFue%2F%3Fmibextid%3DwwXIfr#",
+                youtube:
+                    "https://youtube.com/watch?si=atWjwf2GxFSPXOGu&v=jXdLwLpRbtk&feature=youtu.be",
             },
         },
         footer: {
@@ -210,18 +254,40 @@ export const siteContent = {
             email: "oyuna@bechekhan.ru",
             phone: "+7 976 99 03 9686",
             messenger: "+7 (991) 427-19-04",
-            region: "Монголия и страны ЕАЭС",
+            detailedInfoTitle: "📞 Для получения подробной информации:",
+            additionalContacts: [
+                {
+                    label: "Телефон",
+                    value: "+79914271904",
+                },
+                {
+                    label: "WhatsApp",
+                    value: "+79914271904",
+                },
+                {
+                    label: "Viber",
+                    value: "+79914271904",
+                },
+                {
+                    label: "Telegram",
+                    value: "+79914271904",
+                },
+                {
+                    label: "WeChat, imo, KakaoTalk",
+                    value: "+79140561369",
+                },
+            ],
+            region: "Монголия и страны Евразийского экономического союза",
             socialTitle: "Социальные сети",
             socials: {
                 whatsapp: "https://wa.me/79914271904",
                 viber: "viber://chat?number=%2B79914271904",
                 wechat: "https://www.wechat.com/",
                 telegram: "https://t.me/yourusername",
-                facebook: "https://facebook.com/yourpage",
-                instagram: "https://instagram.com/yourpage",
-                youtube: "https://youtube.com/@yourchannel",
-                tiktok: "https://tiktok.com/@yourpage",
-                linkedin: "https://linkedin.com/company/yourcompany",
+                facebook:
+                    "https://www.facebook.com/bechekhan?mibextid=wwXIfr&rdid=R70JS1LSNetS9Cga&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Atj9bKFue%2F%3Fmibextid%3DwwXIfr#",
+                youtube:
+                    "https://youtube.com/watch?si=atWjwf2GxFSPXOGu&v=jXdLwLpRbtk&feature=youtu.be",
             },
         },
         footer: {

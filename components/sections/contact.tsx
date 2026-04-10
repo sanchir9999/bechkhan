@@ -1,13 +1,11 @@
+import Image from "next/image";
 import {
     FaWhatsapp,
     FaViber,
     FaWeixin,
     FaTelegramPlane,
     FaFacebookF,
-    FaInstagram,
     FaYoutube,
-    FaTiktok,
-    FaLinkedinIn,
 } from "react-icons/fa";
 
 type ContactProps = {
@@ -25,10 +23,7 @@ type ContactProps = {
                 wechat?: string;
                 telegram?: string;
                 facebook?: string;
-                instagram?: string;
                 youtube?: string;
-                tiktok?: string;
-                linkedin?: string;
             };
         };
     };
@@ -40,12 +35,70 @@ export default function ContactSection({ t }: ContactProps) {
     return (
         <section id="contact" className="bg-zinc-950 py-16 text-white">
             <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-                <div>
-                    <h2 className="text-3xl font-bold tracking-tight">{t.contact.title}</h2>
+                <div className="flex flex-col">
+                    <h2 className="text-3xl font-bold tracking-tight">
+                        {t.contact.title}
+                    </h2>
+
                     <p className="mt-4 max-w-xl text-zinc-300">
-                        Бидэнтэй холбогдож ачаа тээврийн үнэ, маршрут, гаалийн бүрдүүлэлтийн
-                        талаар дэлгэрэнгүй мэдээлэл аваарай.
+                        Бидэнтэй холбогдож ачаа тээврийн үнэ, маршрут, гаалийн
+                        бүрдүүлэлтийн талаар дэлгэрэнгүй мэдээлэл аваарай.
                     </p>
+
+                    <div className="mt-8 max-w-xl">
+                        <a
+                            href={socials.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:bg-white/10"
+                        >
+                            <div className="relative h-40 w-full bg-zinc-800">
+                                <Image
+                                    src="/facebook-preview.jpg"
+                                    alt="Bechekhan MN Facebook page preview"
+                                    fill
+                                    loading="eager"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    className="object-cover translate-y-6"
+                                />
+                            </div>
+
+                            <div className="p-5">
+                                <div className="flex items-center gap-3">
+                                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl  text-white">
+                                        <Image
+                                            src="/logo.png"
+                                            alt="Bechekhan MN logo"
+                                            width={88}
+                                            height={88}
+                                            priority
+                                            className="object-contain p-1"
+                                        />
+
+                                    </div>
+
+                                    <div>
+                                        <p className="text-base font-semibold text-white">
+                                            Bechekhan Facebook Page
+                                        </p>
+                                        <p className="text-sm text-zinc-400">
+                                            Албан ёсны Facebook хуудас
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p className="mt-4 text-sm leading-7 text-zinc-300">
+                                    Манай Facebook хуудсаар зочилж шинэ
+                                    мэдээлэл, үйлчилгээний танилцуулга болон
+                                    холбогдох сувгуудыг үзээрэй.
+                                </p>
+
+                                <div className="mt-4 inline-flex rounded-2xl bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700">
+                                    Facebook нээх
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -71,17 +124,48 @@ export default function ContactSection({ t }: ContactProps) {
                         </p>
 
                         <p>
-                            <span className="font-semibold">WhatsApp / Viber / WeChat:</span>{" "}
+                            <span className="font-semibold">WhatsApp:</span>{" "}
                             <a
                                 href="tel:+79914271904"
                                 className="text-red-400 hover:text-red-300"
                             >
-                                {t.contact.messenger}
+                                +79914271904
                             </a>
                         </p>
 
                         <p>
-                            <span className="font-semibold">Service area:</span> {t.contact.region}
+                            <span className="font-semibold">Viber:</span>{" "}
+                            <a
+                                href="tel:+79914271904"
+                                className="text-red-400 hover:text-red-300"
+                            >
+                                +79914271904
+                            </a>
+                        </p>
+
+                        <p>
+                            <span className="font-semibold">WeChat:</span>{" "}
+                            <a
+                                href="tel:+79914271904"
+                                className="text-red-400 hover:text-red-300"
+                            >
+                                +79914271904
+                            </a>
+                        </p>
+
+                        <p>
+                            <span className="font-semibold">Telegram:</span>{" "}
+                            <a
+                                href="tel:+79914271904"
+                                className="text-red-400 hover:text-red-300"
+                            >
+                                +79914271904
+                            </a>
+                        </p>
+
+                        <p>
+                            <span className="font-semibold">Service area:</span>{" "}
+                            {t.contact.region}
                         </p>
                     </div>
 
@@ -97,10 +181,7 @@ export default function ContactSection({ t }: ContactProps) {
                         socials.wechat ||
                         socials.telegram ||
                         socials.facebook ||
-                        socials.instagram ||
-                        socials.youtube ||
-                        socials.tiktok ||
-                        socials.linkedin) && (
+                        socials.youtube) && (
                             <div className="mt-8">
                                 <h3 className="mb-4 text-lg font-semibold">
                                     {t.contact.socialTitle ?? "Social links"}
@@ -167,18 +248,6 @@ export default function ContactSection({ t }: ContactProps) {
                                         </a>
                                     )}
 
-                                    {socials.instagram && (
-                                        <a
-                                            href={socials.instagram}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label="Instagram"
-                                            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-lg hover:bg-white/20"
-                                        >
-                                            <FaInstagram />
-                                        </a>
-                                    )}
-
                                     {socials.youtube && (
                                         <a
                                             href={socials.youtube}
@@ -188,30 +257,6 @@ export default function ContactSection({ t }: ContactProps) {
                                             className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-lg hover:bg-white/20"
                                         >
                                             <FaYoutube />
-                                        </a>
-                                    )}
-
-                                    {socials.tiktok && (
-                                        <a
-                                            href={socials.tiktok}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label="TikTok"
-                                            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-lg hover:bg-white/20"
-                                        >
-                                            <FaTiktok />
-                                        </a>
-                                    )}
-
-                                    {socials.linkedin && (
-                                        <a
-                                            href={socials.linkedin}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label="LinkedIn"
-                                            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-lg hover:bg-white/20"
-                                        >
-                                            <FaLinkedinIn />
                                         </a>
                                     )}
                                 </div>

@@ -14,7 +14,7 @@ type HeroProps = {
 export default function HeroSection({ t }: HeroProps) {
     return (
         <section className="bg-gradient-to-b from-zinc-50 to-white">
-            <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
+            <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-12 pb-4 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pt-20 lg:pb-6">
                 <div className="max-w-3xl">
                     <span className="inline-flex rounded-full bg-red-50 px-4 py-2 text-sm font-medium text-red-700 ring-1 ring-red-200">
                         International Cargo Transportation

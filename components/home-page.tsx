@@ -6,6 +6,7 @@ import HeroSection from "@/components/sections/hero";
 import AboutSection from "@/components/sections/about";
 import ServicesSection from "@/components/sections/services";
 import AdvantagesSection from "@/components/sections/advantages";
+import PartnerSection from "@/components/sections/partner";
 import ContactSection from "@/components/sections/contact";
 import { siteContent, type Lang } from "@/lib/site-content";
 
@@ -48,6 +49,9 @@ export default function HomePage() {
                         <a href="#advantages" className="text-sm hover:text-red-600">
                             {t.nav.advantages}
                         </a>
+                        <a href="#partner" className="text-sm hover:text-red-600">
+                            Хамтрагч
+                        </a>
                         <a href="#contact" className="text-sm hover:text-red-600">
                             {t.nav.contact}
                         </a>
@@ -75,6 +79,7 @@ export default function HomePage() {
                 <AboutSection t={t} />
                 <ServicesSection t={t} />
                 <AdvantagesSection t={t} />
+                <PartnerSection lang={lang} />
                 <ContactSection t={t} />
             </main>
 
