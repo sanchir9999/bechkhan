@@ -146,10 +146,10 @@ export default function ContactSection({ t }: ContactProps) {
                         <p>
                             <span className="font-semibold">WeChat:</span>{" "}
                             <a
-                                href="tel:+79914271904"
+                                href="tel:+79140561369"
                                 className="text-red-400 hover:text-red-300"
                             >
-                                +79914271904
+                                +79140561369
                             </a>
                         </p>
 
