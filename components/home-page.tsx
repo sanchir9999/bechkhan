@@ -95,8 +95,34 @@ export default function HomePage() {
 
             </main>
 
-            <footer className="text-center py-6 text-sm text-zinc-500">
-                {t.footer.text}
+            <footer className="bg-zinc-950 text-zinc-400 py-12">
+                <div className="mx-auto max-w-7xl px-4 grid md:grid-cols-3 gap-8">
+                    <div>
+                        <p className="text-white font-bold text-lg mb-3">Bechekhan MN</p>
+                        <p className="text-sm">{t.footer.text}</p>
+                        <p className="text-sm mt-2">oyuna@bechekhan.ru</p>
+                        <p className="text-sm">+7 991 427 19 04</p>
+                    </div>
+                    <div>
+                        <p className="text-white font-semibold mb-3">Үйлчилгээ</p>
+                        <ul className="space-y-2 text-sm">
+                            <li><Link href="/services/auto-transport" className="hover:text-white transition">🚚 Авто тээвэр</Link></li>
+                            <li><Link href="/services/railway" className="hover:text-white transition">🚂 Төмөр замын тээвэр</Link></li>
+                            <li><Link href="/services/customs" className="hover:text-white transition">🛂 Гаалийн бүрдүүлэлт</Link></li>
+                            <li><Link href="/services/ved" className="hover:text-white transition">📋 ВЭД зөвлөгөө</Link></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="text-white font-semibold mb-3">Маршрут</p>
+                        <ul className="space-y-2 text-sm">
+                            <li><Link href="/oros-mongol-acha" className="hover:text-white transition">Орос Монгол ачаа тээвэр</Link></li>
+                            <li><Link href="/gruzoperevozki-rossiya-mongoliya" className="hover:text-white transition">Грузоперевозки Россия Монголия</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="text-center mt-8 pt-8 border-t border-zinc-800 text-sm">
+                    © 2025 Bechekhan MN — Орос Монгол Ачаа Тээвэр
+                </div>
             </footer>
 
             <QuoteModal

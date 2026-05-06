@@ -31,12 +31,15 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness"],
+    "@type": "LocalBusiness",
     name: "Bechekhan MN",
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    description:
-      "ОХУ, Казахстан, Беларусь улсаас Монгол Улс руу ачаа тээвэрлэлтийн үйлчилгээ",
+    telephone: "+79914271904",
+    email: "oyuna@bechekhan.ru",
+    description: "ОХУ-аас Монгол руу ачаа тээвэр, гаалийн бүрдүүлэлт. Грузоперевозки Россия Монголия.",
+    areaServed: ["Mongolia", "Russia", "Kazakhstan", "Belarus"],
+    serviceType: "Cargo Transportation",
     address: {
       "@type": "PostalAddress",
       addressCountry: "MN",
@@ -44,14 +47,22 @@ export default function RootLayout({
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+7 976 99 03 9686",
+      telephone: "+79914271904",
       contactType: "Customer Service",
-      areaServed: ["RU", "KZ", "BY", "MN"],
+      availableLanguage: ["Mongolian", "Russian"],
+      areaServed: ["MN", "RU", "KZ", "BY"],
     },
-    sameAs: [
-      "https://wa.me/79914271904",
-      "viber://chat?number=+79914271904",
-    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Logistics Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Авто тээвэр", url: `${siteUrl}/services/auto-transport` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Төмөр замын тээвэр", url: `${siteUrl}/services/railway` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Гаалийн бүрдүүлэлт", url: `${siteUrl}/services/customs` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "ВЭД зөвлөгөө", url: `${siteUrl}/services/ved` } },
+      ],
+    },
+    sameAs: ["https://wa.me/79914271904"],
   };
 
   return (
