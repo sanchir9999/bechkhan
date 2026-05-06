@@ -60,6 +60,9 @@ export default function RootLayout({
     >
       <head>
         <link rel="sitemap" href="/sitemap.xml" />
+        <link rel="alternate" hrefLang="mn" href="https://bechekhan.mn" />
+        <link rel="alternate" hrefLang="ru" href="https://bechekhan.mn/gruzoperevozki-rossiya-mongoliya" />
+        <link rel="alternate" hrefLang="x-default" href="https://bechekhan.mn" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
