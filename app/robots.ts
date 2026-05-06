@@ -6,9 +6,18 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/*.json$", "/*?*"],
+        disallow: ["/api/"],
+      },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+      },
+      {
+        userAgent: "YandexBot",
+        allow: "/",
       },
     ],
     sitemap: "https://bechekhan.mn/sitemap.xml",
+    host: "https://bechekhan.mn",
   };
 }

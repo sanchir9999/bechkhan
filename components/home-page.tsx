@@ -27,7 +27,7 @@ export default function HomePage() {
 
                     <Link href="/" className="flex items-center gap-3">
                         <div className="relative h-16 w-16">
-                            <Image src="/logo.png" alt="logo" fill className="object-contain" />
+                            <Image src="/logo.png" alt="Bechekhan MN - Орос Монгол ачаа тээврийн компани" fill className="object-contain" />
                         </div>
 
                         <div>

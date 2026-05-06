@@ -50,7 +50,7 @@ export default function HeroSection({ t }: HeroProps) {
                         <div className="relative h-[280px] w-full sm:h-[360px] lg:h-[460px]">
                             <Image
                                 src="/hero-image.jpg"
-                                alt="International cargo transportation"
+                                alt="Орос Монгол ачаа тээврийн машин - Улаан-Үдээс Улаанбаатар хүртэл грузоперевозки"
                                 fill
                                 priority
                                 className="object-cover"

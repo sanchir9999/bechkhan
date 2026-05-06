@@ -58,7 +58,7 @@ export default function ContactSection({ t }: ContactProps) {
                                 <div className="relative h-40 w-full bg-zinc-800">
                                     <Image
                                         src="/facebook-preview.jpg"
-                                        alt="Bechekhan MN Facebook page preview"
+                                        alt="Bechekhan MN - Орос Монгол ачаа тээвэр Facebook хуудас"
                                         fill
                                         loading="eager"
                                         sizes="(max-width: 1024px) 100vw, 50vw"
@@ -71,7 +71,7 @@ export default function ContactSection({ t }: ContactProps) {
                                         <div className="flex h-11 w-11 items-center justify-center rounded-2xl text-white">
                                             <Image
                                                 src="/logo.png"
-                                                alt="Bechekhan MN logo"
+                                                alt="Bechekhan MN лого - Орос Монгол ачаа тээврийн компани"
                                                 width={88}
                                                 height={88}
                                                 priority
