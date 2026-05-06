@@ -1,6 +1,68 @@
 export type Lang = "mn" | "en" | "ru";
 
-export const siteContent = {
+type Section = {
+    title: string;
+    text: string;
+};
+
+type Hero = {
+    title: string;
+    subtitle: string;
+    description: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    ctaThird: string;
+    seoText: string;
+};
+
+type Contact = {
+    title: string;
+    email: string;
+    phone: string;
+    messenger: string;
+    region: string;
+    socialTitle: string;
+    socials: {
+        whatsapp?: string;
+        viber?: string;
+        wechat?: string;
+        telegram?: string;
+        facebook?: string;
+        youtube?: string;
+    };
+};
+
+type SiteContent = {
+    nav: {
+        about: string;
+        services: string;
+        advantages: string;
+        contact: string;
+    };
+
+    hero: Hero;
+    about: Section;
+
+    services: {
+        title: string;
+        items: string[];
+    };
+
+    advantages: {
+        title: string;
+        items: { title: string; text: string }[];
+    };
+
+    contact: Contact;
+
+    footer: {
+        text: string;
+    };
+};
+
+export const siteContent: Record<Lang, SiteContent> = {
+
+    // ===================== MONGOL =====================
     mn: {
         nav: {
             about: "Бидний тухай",
@@ -8,30 +70,30 @@ export const siteContent = {
             advantages: "Давуу тал",
             contact: "Холбоо барих",
         },
-        header: {
-            tagline: "Бид тээвэрлэлтийг илүү хялбар болгоно.",
-        },
+
         hero: {
-            title: "Bechekhan MN",
-            subtitle:
-                "ОХУ, Казахстан, Беларусь ↔ Монгол чиглэлийн авто болон төмөр замын ачаа тээврийн найдвартай шийдэл.",
+            title: "Орос Монгол Ачаа Тээвэр",
+            subtitle: "Найдвартай логистик шийдэл",
+            description:
+                "Бид ОХУ, Казахстан, Беларусь улсаас Монгол Улс руу болон буцаан ачаа тээвэрлэлтийн үйлчилгээ үзүүлдэг.",
             ctaPrimary: "Холбоо барих",
-            ctaSecondary: "Үйлчилгээ үзэх",
+            ctaSecondary: "Үйлчилгээ",
+            ctaThird: "Дэлгэрэнгүй",
+            seoText:
+                "Орос Монгол ачаа тээвэр, логистик үйлчилгээ, гааль, импорт экспорт, агуулах үйлчилгээ.",
         },
+
         about: {
             title: "Бидний тухай",
-            text: "ТК Бечехан MN нь ОХУ, Казахстан, Беларусь улсаас Монгол Улс руу болон буцаан ачаа тээвэрлэлтийн чиглэлээр мэргэшсэн. Бид 1 кг-аас 100 тонн хүртэлх ачааг авто болон төмөр замаар тээвэрлэж, гаалийн бүрдүүлэлт болон гадаад эдийн засгийн үйл ажиллагаа (ВЭД)-тай холбоотой мэргэжлийн зөвлөгөө үзүүлдэг.",
+            text:
+                "ТК Бечехан MN нь ОХУ, Казахстан, Беларусь улсаас Монгол Улс руу болон буцаан ачаа тээвэрлэлтийн чиглэлээр мэргэшсэн. Бид 1 кг-аас 100 тонн хүртэлх ачааг авто болон төмөр замаар тээвэрлэж, гаалийн бүрдүүлэлт болон ВЭД зөвлөгөө үзүүлдэг.",
         },
+
         services: {
             title: "Үйлчилгээ",
-            items: [
-                "Авто тээвэр",
-                "Төмөр замын тээвэр",
-                "Импорт / экспорт / реэкспортын гаалийн бүрдүүлэлт",
-                "ВЭД-ийн үнэ төлбөргүй зөвлөгөө",
-                "24/7 харилцагчийн дэмжлэг",
-            ],
+            items: ["Авто тээвэр", "Төмөр зам", "Гааль", "ВЭД зөвлөгөө"],
         },
+
         advantages: {
             title: "Яагаад биднийг сонгох вэ",
             items: [
@@ -53,52 +115,30 @@ export const siteContent = {
                 },
             ],
         },
+
         contact: {
             title: "Холбоо барих",
             email: "oyuna@bechekhan.ru",
             phone: "+7 976 99 03 9686",
-            messenger: "+7 (991) 427-19-04",
-            detailedInfoTitle: "📞 Дэлгэрэнгүй мэдээлэл авахыг хүсвэл:",
-            additionalContacts: [
-                {
-                    label: "Утас",
-                    value: "+79914271904",
-                },
-                {
-                    label: "WhatsApp",
-                    value: "+79914271904",
-                },
-                {
-                    label: "Viber",
-                    value: "+79914271904",
-                },
-                {
-                    label: "Telegram",
-                    value: "+79914271904",
-                },
-                {
-                    label: "WeChat, imo, KakaoTalk",
-                    value: "+79140561369",
-                },
-            ],
-            region: "Монгол Улс болон Евразийн эдийн засгийн холбооны орнууд",
-            socialTitle: "Сошиал холбоосууд",
+            messenger: "+7 991 427 19 04",
+            region: "Монгол, ОХУ, Казахстан, Беларусь",
+            socialTitle: "Сошиал холбоос",
             socials: {
                 whatsapp: "https://wa.me/79914271904",
-                viber: "viber://chat?number=%2B79914271904",
-                wechat: "https://www.wechat.com/",
-                telegram: "https://t.me/yourusername",
-                facebook:
-                    "https://www.facebook.com/bechekhan?mibextid=wwXIfr&rdid=R70JS1LSNetS9Cga&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Atj9bKFue%2F%3Fmibextid%3DwwXIfr#",
-                youtube:
-                    "https://youtube.com/watch?si=atWjwf2GxFSPXOGu&v=jXdLwLpRbtk&feature=youtu.be",
+                viber: "viber://chat?number=+79914271904",
+                wechat: "#",
+                telegram: "#",
+                facebook: "#",
+                youtube: "#",
             },
         },
+
         footer: {
-            text: "Bechekhan MN — Олон улсын ачаа тээвэр, гаалийн үйлчилгээ.",
+            text: "Bechekhan MN ©",
         },
     },
 
+    // ===================== ENGLISH =====================
     en: {
         nav: {
             about: "About",
@@ -106,97 +146,75 @@ export const siteContent = {
             advantages: "Advantages",
             contact: "Contact",
         },
-        header: {
-            tagline: "We make transportation easier",
-        },
+
         hero: {
-            title: "Bechekhan MN",
-            subtitle:
-                "Reliable road and rail cargo transportation between Russia, Kazakhstan, Belarus and Mongolia.",
-            ctaPrimary: "Contact Us",
-            ctaSecondary: "View Services",
+            title: "Russia Mongolia Cargo Transport",
+            subtitle: "Reliable logistics solution",
+            description:
+                "We provide cargo transport between Russia, Kazakhstan, Belarus and Mongolia.",
+            ctaPrimary: "Contact",
+            ctaSecondary: "Services",
+            ctaThird: "More",
+            seoText:
+                "Russia Mongolia cargo transport, logistics services, customs clearance, import export, warehouse.",
         },
+
         about: {
             title: "About Us",
-            text: "Bechekhan MN specializes in cargo transportation from Russia, Kazakhstan and Belarus to Mongolia and back. We transport shipments from 1 kg up to 100 tons by road and rail, and also provide customs clearance and foreign trade consultation.",
+            text:
+                "TK Bechekhan MN specializes in cargo transport between Russia, Kazakhstan, Belarus and Mongolia. We handle 1kg–100 tons by road and rail with customs clearance and VED consulting.",
         },
+
         services: {
             title: "Services",
-            items: [
-                "Road transportation",
-                "Rail transportation",
-                "Customs clearance for import / export / re-export",
-                "Free foreign trade consultation",
-                "24/7 customer support",
-            ],
+            items: ["Road transport", "Rail transport", "Customs", "Consulting"],
         },
+
         advantages: {
-            title: "Why Choose Us",
+            title: "Why choose us",
             items: [
                 {
-                    title: "Wide Coverage",
-                    text: "Reliable transportation between Russia, Kazakhstan, Belarus and Mongolia.",
+                    title: "Wide coverage",
+                    text: "Stable logistics across Russia, Kazakhstan, Belarus ↔ Mongolia.",
                 },
                 {
-                    title: "Flexible Capacity",
-                    text: "From small 1 kg parcels to 100-ton cargo shipments.",
+                    title: "Flexible cargo",
+                    text: "We transport from 1 kg up to 100 tons.",
                 },
                 {
-                    title: "Professional Advice",
-                    text: "Support for customs procedures and foreign trade operations.",
+                    title: "Professional consulting",
+                    text: "Customs and VED logistics consulting.",
                 },
                 {
-                    title: "24/7 Support",
-                    text: "Fast communication and dependable customer service.",
+                    title: "24/7 support",
+                    text: "Fast response and reliable customer service.",
                 },
             ],
         },
+
         contact: {
             title: "Contact",
             email: "oyuna@bechekhan.ru",
             phone: "+7 976 99 03 9686",
-            messenger: "+7 (991) 427-19-04",
-            detailedInfoTitle: "📞 For detailed information:",
-            additionalContacts: [
-                {
-                    label: "Phone",
-                    value: "+79914271904",
-                },
-                {
-                    label: "WhatsApp",
-                    value: "+79914271904",
-                },
-                {
-                    label: "Viber",
-                    value: "+79914271904",
-                },
-                {
-                    label: "Telegram",
-                    value: "+79914271904",
-                },
-                {
-                    label: "WeChat, imo, KakaoTalk",
-                    value: "+79140561369",
-                },
-            ],
-            region: "Mongolia and EAEU countries",
+            messenger: "+7 991 427 19 04",
+            region: "Mongolia, Russia, Kazakhstan, Belarus",
             socialTitle: "Social links",
             socials: {
-                whatsapp: "https://wa.me/79914271904",
-                viber: "viber://chat?number=%2B79914271904",
-                wechat: "https://www.wechat.com/",
-                telegram: "https://t.me/yourusername",
-                facebook:
-                    "https://www.facebook.com/bechekhan?mibextid=wwXIfr&rdid=R70JS1LSNetS9Cga&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Atj9bKFue%2F%3Fmibextid%3DwwXIfr#",
-                youtube:
-                    "https://youtube.com/watch?si=atWjwf2GxFSPXOGu&v=jXdLwLpRbtk&feature=youtu.be",
+                whatsapp: "#",
+                viber: "#",
+                wechat: "#",
+                telegram: "#",
+                facebook: "#",
+                youtube: "#",
             },
         },
+
         footer: {
-            text: "Bechekhan MN — International cargo transportation and customs services.",
+            text: "Bechekhan MN ©",
         },
     },
 
+    // ===================== RUSSIAN =====================
     ru: {
         nav: {
             about: "О нас",
@@ -204,94 +222,71 @@ export const siteContent = {
             advantages: "Преимущества",
             contact: "Контакты",
         },
-        header: {
-            tagline: "Мы делаем перевозки проще",
-        },
+
         hero: {
-            title: "Bechekhan MN",
-            subtitle:
-                "Надежные автомобильные и железнодорожные грузоперевозки между Россией, Казахстаном, Беларусью и Монголией.",
+            title: "Грузоперевозки Россия Монголия",
+            subtitle: "Надежная логистика",
+            description:
+                "Международные перевозки между Россией, Казахстаном, Беларусью и Монголией.",
             ctaPrimary: "Связаться",
-            ctaSecondary: "Наши услуги",
+            ctaSecondary: "Услуги",
+            ctaThird: "Подробнее",
+            seoText:
+                "Грузоперевозки Россия Монголия, логистика, таможня, складские услуги.",
         },
+
         about: {
             title: "О нас",
-            text: "ТК Бечехан MN специализируется на перевозке грузов из России, Казахстана и Беларуси в Монголию и обратно. Мы доставляем грузы от 1 кг до 100 тонн автомобильным и железнодорожным транспортом, а также оказываем услуги таможенного оформления и консультации по ВЭД.",
+            text:
+                "ТК Бечехан MN специализируется на перевозках между Россией, Казахстаном, Беларусью и Монголией. Мы перевозим от 1 кг до 100 тонн с таможенным оформлением и ВЭД консультацией.",
         },
+
         services: {
             title: "Услуги",
-            items: [
-                "Автомобильные перевозки",
-                "Железнодорожные перевозки",
-                "Таможенное оформление импорт / экспорт / реэкспорт",
-                "Бесплатная консультация по ВЭД",
-                "Поддержка 24/7",
-            ],
+            items: ["Авто", "ЖД", "Таможня", "Консалтинг"],
         },
+
         advantages: {
             title: "Почему выбирают нас",
             items: [
                 {
                     title: "Широкая география",
-                    text: "Надежные перевозки между Россией, Казахстаном, Беларусью и Монголией.",
+                    text: "Россия, Казахстан, Беларусь ↔ Монголия.",
                 },
                 {
-                    title: "Гибкий объем",
-                    text: "От отправлений 1 кг до крупных грузов 100 тонн.",
+                    title: "Гибкие объемы",
+                    text: "От 1 кг до 100 тонн.",
                 },
                 {
-                    title: "Профессиональная помощь",
-                    text: "Консультации по таможне и внешнеэкономической деятельности.",
+                    title: "Профессиональная поддержка",
+                    text: "Таможня и ВЭД консультации.",
                 },
                 {
-                    title: "Поддержка 24/7",
-                    text: "Оперативная связь и постоянное сопровождение клиентов.",
+                    title: "24/7 поддержка",
+                    text: "Быстрая и надежная связь.",
                 },
             ],
         },
+
         contact: {
             title: "Контакты",
             email: "oyuna@bechekhan.ru",
             phone: "+7 976 99 03 9686",
-            messenger: "+7 (991) 427-19-04",
-            detailedInfoTitle: "📞 Для получения подробной информации:",
-            additionalContacts: [
-                {
-                    label: "Телефон",
-                    value: "+79914271904",
-                },
-                {
-                    label: "WhatsApp",
-                    value: "+79914271904",
-                },
-                {
-                    label: "Viber",
-                    value: "+79914271904",
-                },
-                {
-                    label: "Telegram",
-                    value: "+79914271904",
-                },
-                {
-                    label: "WeChat, imo, KakaoTalk",
-                    value: "+79140561369",
-                },
-            ],
-            region: "Монголия и страны Евразийского экономического союза",
-            socialTitle: "Социальные сети",
+            messenger: "+7 991 427 19 04",
+            region: "Россия, Казахстан, Беларусь, Монголия",
+            socialTitle: "Соцсети",
             socials: {
-                whatsapp: "https://wa.me/79914271904",
-                viber: "viber://chat?number=%2B79914271904",
-                wechat: "https://www.wechat.com/",
-                telegram: "https://t.me/yourusername",
-                facebook:
-                    "https://www.facebook.com/bechekhan?mibextid=wwXIfr&rdid=R70JS1LSNetS9Cga&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Atj9bKFue%2F%3Fmibextid%3DwwXIfr#",
-                youtube:
-                    "https://youtube.com/watch?si=atWjwf2GxFSPXOGu&v=jXdLwLpRbtk&feature=youtu.be",
+                whatsapp: "#",
+                viber: "#",
+                wechat: "#",
+                telegram: "#",
+                facebook: "#",
+                youtube: "#",
             },
         },
+
         footer: {
-            text: "Bechekhan MN — международные грузоперевозки и таможенные услуги.",
+            text: "Bechekhan MN ©",
         },
     },
-} as const;
+};

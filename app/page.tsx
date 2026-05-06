@@ -1,79 +1,71 @@
 import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
-const siteUrl = "https://bechekhan.mn"; // өөрийн жинхэнэ домэйнээр солино
+const siteUrl = "https://bechekhan.mn";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+
   title: {
-    default: "Bechekhan MN | Олон улсын ачаа тээвэр",
+    default: "Орос Монгол Ачаа Тээвэр | Bechekhan MN",
     template: "%s | Bechekhan MN",
   },
+
   description:
-    "ОХУ, Казахстан, Беларусь болон Монголын хооронд авто болон төмөр замын ачаа тээвэр, гаалийн бүрдүүлэлт, импорт экспортын зөвлөгөө.",
+    "ОХУ-аас Монгол руу ачаа тээвэр, Улаан-Үдээс Улаанбаатар хүртэл сборный груз болон FTL тээвэр. Гаалийн бүрдүүлэлт, агуулах үйлчилгээтэй найдвартай логистик шийдэл.",
+
   keywords: [
-    "Bechekhan MN",
-    "ачаа тээвэр",
-    "олон улсын тээвэр",
-    "Монгол ОХУ ачаа тээвэр",
-    "Казахстан Монгол логистик",
-    "Беларусь Монгол карго",
-    "төмөр замын тээвэр",
-    "авто тээвэр",
+    "Орос Монгол ачаа тээвэр",
+    "ачаa тээвэр УБ",
+    "Улаан-Үд УБ cargo",
+    "сборный груз",
+    "FTL тээвэр",
+    "логистик компани Монгол",
     "гаалийн бүрдүүлэлт",
-    "импорт экспорт",
-    "cargo transportation Mongolia",
-    "rail freight Mongolia",
-    "road freight Mongolia",
-    "customs clearance Mongolia",
+    "агуулах үйлчилгээ",
+    "cargo Mongolia",
   ],
+
   alternates: {
-    canonical: "/",
-    languages: {
-      "mn-MN": "/",
-      "en-US": "/?lang=en",
-      "ru-RU": "/?lang=ru",
-    },
+    canonical: siteUrl,
   },
+
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "Bechekhan MN",
-    title: "Bechekhan MN | International Cargo Transportation",
+    title: "Орос Монгол Ачаа Тээвэр | Bechekhan MN",
     description:
-      "Reliable road and rail cargo transportation between Russia, Kazakhstan, Belarus and Mongolia.",
+      "Найдвартай ОХУ-Монгол ачаа тээвэр, Улаан-Үд УБ чиглэлд сборный груз болон FTL үйлчилгээ.",
     locale: "mn_MN",
-    alternateLocale: ["en_US", "ru_RU"],
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/facebook-preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Bechekhan MN cargo transportation",
+        alt: "Bechekhan cargo transportation",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Bechekhan MN | International Cargo Transportation",
+    title: "Орос Монгол Ачаа Тээвэр | Bechekhan MN",
     description:
-      "Road and rail cargo transportation, customs clearance, and logistics support.",
-    images: ["/og-image.jpg"],
+      "ОХУ-Монгол хоорондын найдвартай ачаа тээвэр, логистик үйлчилгээ.",
+    images: ["/facebook-preview.jpg"],
   },
+
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
-  category: "Logistics",
 };
 
 export default function Page() {
-  return <HomePage />;
+  return (
+    <main>
+      <HomePage />
+    </main>
+  );
 }
